@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnb-TM-oHO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="kyk-lA-FYP">
+            <objects>
+                <viewController id="wnb-TM-oHO" customClass="CartViewController" customModule="Check_out" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7zY-b7-f7A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-y1-Nn9" userLabel="CartScreen">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcS-kq-bYS" userLabel="TopBar">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq6-h8-JN3" userLabel="BackButton">
+                                                <rect key="frame" x="25" y="19" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="UL5-8T-QeD"/>
+                                                    <constraint firstAttribute="height" constant="22" id="aNO-cw-gET"/>
+                                                </constraints>
+                                                <state key="normal" image="arrowtriangle.left.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$X.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7k-4K-cSX" userLabel="Total">
+                                                <rect key="frame" x="317" y="14" width="75" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="vI8-fr-cMY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lG-jM-eJx" userLabel="MyCart">
+                                                <rect key="frame" x="77" y="14" width="100" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="DBi-Tp-Ogi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2lc-Yl-LEK"/>
+                                            <constraint firstItem="Yq6-h8-JN3" firstAttribute="centerY" secondItem="HcS-kq-bYS" secondAttribute="centerY" id="8TU-Dj-fct"/>
+                                            <constraint firstItem="X7k-4K-cSX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6lG-jM-eJx" secondAttribute="trailing" constant="8" symbolic="YES" id="QWs-UO-xqE"/>
+                                            <constraint firstAttribute="trailing" secondItem="X7k-4K-cSX" secondAttribute="trailing" constant="22" id="Rk3-eH-9Ge"/>
+                                            <constraint firstItem="X7k-4K-cSX" firstAttribute="centerY" secondItem="HcS-kq-bYS" secondAttribute="centerY" id="Tnk-cj-M1B"/>
+                                            <constraint firstItem="6lG-jM-eJx" firstAttribute="centerY" secondItem="HcS-kq-bYS" secondAttribute="centerY" id="gAN-8g-SQ4"/>
+                                            <constraint firstItem="Yq6-h8-JN3" firstAttribute="leading" secondItem="HcS-kq-bYS" secondAttribute="leading" constant="25" id="heh-CJ-OIg"/>
+                                            <constraint firstItem="6lG-jM-eJx" firstAttribute="leading" secondItem="Yq6-h8-JN3" secondAttribute="trailing" constant="30" id="jjH-hJ-LWB"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kq5-A2-vyb" userLabel="CartTableView">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="618"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihc-Jd-abi" userLabel="ConfirmButton">
+                                        <rect key="frame" x="87" y="728" width="240" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Lku-Bi-237"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="fvo-GW-7Zy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Confirm Order">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ihc-Jd-abi" secondAttribute="bottom" constant="30" id="3Yh-gY-Xmv"/>
+                                    <constraint firstItem="HcS-kq-bYS" firstAttribute="leading" secondItem="oUm-y1-Nn9" secondAttribute="leading" id="8XJ-cK-XVD"/>
+                                    <constraint firstAttribute="trailing" secondItem="HcS-kq-bYS" secondAttribute="trailing" id="JiM-Qc-lzY"/>
+                                    <constraint firstItem="Kq5-A2-vyb" firstAttribute="leading" secondItem="oUm-y1-Nn9" secondAttribute="leading" id="Z5x-Up-9dD"/>
+                                    <constraint firstItem="HcS-kq-bYS" firstAttribute="top" secondItem="oUm-y1-Nn9" secondAttribute="top" id="gzx-4X-No5"/>
+                                    <constraint firstItem="Ihc-Jd-abi" firstAttribute="top" secondItem="Kq5-A2-vyb" secondAttribute="bottom" constant="50" id="iSh-DF-rPN"/>
+                                    <constraint firstItem="Ihc-Jd-abi" firstAttribute="centerX" secondItem="oUm-y1-Nn9" secondAttribute="centerX" id="mR2-5d-KLh"/>
+                                    <constraint firstItem="Kq5-A2-vyb" firstAttribute="top" secondItem="HcS-kq-bYS" secondAttribute="bottom" id="oDI-Zk-GBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kq5-A2-vyb" secondAttribute="trailing" id="pWi-lk-t56"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oUm-y1-Nn9" firstAttribute="leading" secondItem="amZ-8x-z6Y" secondAttribute="leading" id="afH-3h-X1V"/>
+                            <constraint firstItem="amZ-8x-z6Y" firstAttribute="bottom" secondItem="oUm-y1-Nn9" secondAttribute="bottom" id="bQb-gy-ONq"/>
+                            <constraint firstItem="amZ-8x-z6Y" firstAttribute="trailing" secondItem="oUm-y1-Nn9" secondAttribute="trailing" id="ncK-CH-75c"/>
+                            <constraint firstItem="oUm-y1-Nn9" firstAttribute="top" secondItem="amZ-8x-z6Y" secondAttribute="top" id="yi0-x9-H8V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="amZ-8x-z6Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="BackButton" destination="Yq6-h8-JN3" id="fcj-uZ-mIw"/>
+                        <outlet property="CartTableView" destination="Kq5-A2-vyb" id="HnE-BH-nzl"/>
+                        <outlet property="ConfirmButton" destination="Ihc-Jd-abi" id="DfA-XU-p3v"/>
+                        <outlet property="TopBar" destination="HcS-kq-bYS" id="Jur-GG-yta"/>
+                        <outlet property="TotalLabel" destination="X7k-4K-cSX" id="kDq-pN-uHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgq-fB-qxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
